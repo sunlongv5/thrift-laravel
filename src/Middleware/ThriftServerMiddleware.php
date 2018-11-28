@@ -31,8 +31,7 @@ class ThriftServerMiddleware
         $this->thrift_server->process($input_trans, $output_trans);
         $buffer = $output_trans->getBuffer();
         $output_trans->close();
-        return (new Response($buffer, 200))
-            ->header('Content-Type', 'application/x-thrift');
+        return new Response($buffer, 200);
     }
 
     /**
