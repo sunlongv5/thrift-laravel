@@ -1,6 +1,6 @@
 <?php
 
-namespace sunlongv5\Thrift;
+namespace sunlong\Thrift;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -20,8 +20,8 @@ class ThriftServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton('sunlongv5\Thrift\Contracts\ThriftServer', 'sunlongv5\Thrift\ThriftServerImpl');
-        $this->app->singleton('sunlongv5\Thrift\Contracts\ThriftClient', 'sunlongv5\Thrift\ThriftClientImpl');
+        $this->app->singleton('sunlong\Thrift\Contracts\ThriftServer', 'sunlong\Thrift\ThriftServerImpl');
+        $this->app->singleton('sunlong\Thrift\Contracts\ThriftClient', 'sunlong\Thrift\ThriftClientImpl');
     }
 
     /**
@@ -31,6 +31,6 @@ class ThriftServiceProvider extends ServiceProvider
      */
     public function provides()
     {
-        return ['sunlongv5\Thrift\Contracts\ThriftServer', 'sunlongv5\Thrift\Contracts\ThriftClient'];
+        return ['sunlong\Thrift\Contracts\ThriftServer', 'sunlong\Thrift\Contracts\ThriftClient'];
     }
 }

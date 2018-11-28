@@ -19,7 +19,7 @@
     },
     "autoload": {
         "psr-4": {
-            "sunlongv5\\Thrift\\": "src/"
+            "sunlong\\Thrift\\": "src/"
         }
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace sunlongv5\Thrift\Contracts;
+namespace sunlong\Thrift\Contracts;
 
 use Thrift\Transport\TTransport;
 

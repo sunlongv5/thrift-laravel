@@ -1,8 +1,8 @@
 <?php
 
-namespace sunlongv5\Thrift;
+namespace sunlong\Thrift;
 
-use sunlongv5\Thrift\Contracts\ThriftClient;
+use sunlong\Thrift\Contracts\ThriftClient;
 use Illuminate\Contracts\Config\Repository;
 use Thrift\Protocol\TBinaryProtocolAccelerated;
 use Thrift\Protocol\TMultiplexedProtocol;

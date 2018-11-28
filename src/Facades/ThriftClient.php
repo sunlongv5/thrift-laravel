@@ -1,12 +1,12 @@
 <?php
 
-namespace sunlongv5\Thrift\Facades;
+namespace sunlong\Thrift\Facades;
 
 use Illuminate\Support\Facades\Facade;
-use sunlongv5\Thrift\Contracts\ThriftClient as BaseThriftClient;
+use sunlong\Thrift\Contracts\ThriftClient as BaseThriftClient;
 
 /**
- * @see \sunlongv5\Thrift\Contracts\ThriftClient
+ * @see \sunlong\Thrift\Contracts\ThriftClient
  */
 class ThriftClient extends Facade
 {

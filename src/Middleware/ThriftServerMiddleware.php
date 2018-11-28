@@ -1,8 +1,8 @@
 <?php
 
-namespace sunlongv5\Thrift\Middleware;
+namespace sunlong\Thrift\Middleware;
 
-use sunlongv5\Thrift\Contracts\ThriftServer;
+use sunlong\Thrift\Contracts\ThriftServer;
 use Closure;
 use Illuminate\Http\Response;
 use Thrift\Transport\TMemoryBuffer;

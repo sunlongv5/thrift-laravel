@@ -6,43 +6,43 @@
 
 ## 服务端
 
-1. `composer require sunlongv5/thrift-laravel`
+1. `composer require sunlong/thrift-laravel`
 2. 在配置`app.providers`中添加一行:
     ````
-    \sunlongv5\Thrift\ThriftServiceProvider::class
+    \sunlong\Thrift\ThriftServiceProvider::class
     ````
 3. 在配置文件`config/thrift.php`中,设置`thrift.providers`:
     ````
     // 第一个是 service name, 在thrift中定义
     // 第二个是实现该service的类全名,实现了thrift生成的接口
-    // class ImageServcie implement \sunlongv5\ImageServiceIf
-    ['sunlongv5.ImageService', \sunlongv5\ImageService::class],
+    // class ImageServcie implement \sunlong\ImageServiceIf
+    ['sunlong.ImageService', \sunlong\ImageService::class],
     ````
-4. 在`app\Http\Kernel`中添加 Middleware `\sunlongv5\Thrift\Middleware\ThriftServerMiddleware::class`
+4. 在`app\Http\Kernel`中添加 Middleware `\sunlong\Thrift\Middleware\ThriftServerMiddleware::class`
 
     默认会处理`/rpc`上的请求,如果需要更改此规则,请继承此类并覆盖`process`方法
 
 ## 客户端
 
-1. `composer require sunlongv5/thrift-laravel`
+1. `composer require sunlong/thrift-laravel`
 2. 在配置`app.providers`中添加一行:
     ````
-    \sunlongv5\Thrift\ThriftServiceProvider::class
+    \sunlong\Thrift\ThriftServiceProvider::class
     ````
 3. 在配置文件`config/thrift.php`中,设置`thrift.depends`:
     ````
     // key 为url
     // value 为 service name 的数组
     "http://localhost/rpc" => [
-        'sunlongv5.ImageService',
+        'sunlong.ImageService',
     ]
     ````
 4. 使用:
     ````
-    /** @var \sunlongv5\Thrift\Contracts\ThriftClient $thriftClient */
-    $thriftClient = app(\sunlongv5\Thrift\Contracts\ThriftClient::class);
-    /** @var \sunlongv5\ImageServiceIf $imageService */
-    $imageService = $thriftClient->with('sunlongv5.ImageService');
+    /** @var \sunlong\Thrift\Contracts\ThriftClient $thriftClient */
+    $thriftClient = app(\sunlong\Thrift\Contracts\ThriftClient::class);
+    /** @var \sunlong\ImageServiceIf $imageService */
+    $imageService = $thriftClient->with('sunlong.ImageService');
     
     $result = $imageService->foo();
     ````

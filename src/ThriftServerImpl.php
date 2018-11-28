@@ -1,8 +1,8 @@
 <?php
 
-namespace sunlongv5\Thrift;
+namespace sunlong\Thrift;
 
-use sunlongv5\Thrift\Contracts\ThriftServer;
+use sunlong\Thrift\Contracts\ThriftServer;
 use Illuminate\Contracts\Config\Repository;
 use Thrift\Exception\TApplicationException;
 use Thrift\Protocol\TBinaryProtocolAccelerated;
