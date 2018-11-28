@@ -40,9 +40,9 @@ class ThriftClientImpl implements ThriftClient
             $info = parse_url($endpoint);
             $info = [
                 'host' => $info['host'],
-                'port' => $info['port']??80,
-                'uri' => $info['path']??'/',
-                'scheme' => $info['scheme']??'http',
+                'port' => $info['port']?$info['port']:80,
+                'uri' => $info['path']?$info['path']:'/',
+                'scheme' => $info['scheme']?$info['scheme']:'http',
             ];
             $info['port'] = intval($info['port']);
 
