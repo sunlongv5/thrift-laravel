@@ -1,8 +1,8 @@
 <?php
 
-namespace Angejia\Thrift;
+namespace sunlongv5\Thrift;
 
-use Angejia\Thrift\Contracts\ThriftServer;
+use sunlongv5\Thrift\Contracts\ThriftServer;
 use Illuminate\Contracts\Config\Repository;
 use Thrift\Exception\TApplicationException;
 use Thrift\Protocol\TBinaryProtocolAccelerated;

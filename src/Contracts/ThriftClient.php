@@ -1,6 +1,6 @@
 <?php
 
-namespace Angejia\Thrift\Contracts;
+namespace sunlongv5\Thrift\Contracts;
 
 interface ThriftClient
 {

@@ -1,12 +1,12 @@
 <?php
 
-namespace Angejia\Thrift\Facades;
+namespace sunlongv5\Thrift\Facades;
 
 use Illuminate\Support\Facades\Facade;
-use Angejia\Thrift\Contracts\ThriftClient as BaseThriftClient;
+use sunlongv5\Thrift\Contracts\ThriftClient as BaseThriftClient;
 
 /**
- * @see \Angejia\Thrift\Contracts\ThriftClient
+ * @see \sunlongv5\Thrift\Contracts\ThriftClient
  */
 class ThriftClient extends Facade
 {
